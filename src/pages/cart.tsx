@@ -17,9 +17,20 @@ export default function Cart(){
   const deliveryCost = (km:number)=> km<=zones[0]?prices[0]: km<=zones[1]?prices[1]: prices[2];
 
   const kmByMerchant:Record<string,number> = { 'burger-king-voss':2.4, 'malin-sushi':1.1, 'pizza-voss':4.8 };
+// Summér varer og levering som tal (number)
+const subtotal: number = (groups as any[]).reduce(
+  (s: number, g: any) =>
+    s + (g.items as any[]).reduce((x: number, i: any) => x + i.price * i.qty, 0),
+  0
+);
 
-  const subtotal = groups.reduce((s:any,g:any)=> s + g.items.reduce((x:any,i:any)=>x+i.price*i.qty,0), 0);
-  const delivery = groups.reduce((s:any,g:any)=> s + deliveryCost(kmByMerchant[g.merchantId]||2), 0);
+const delivery: number = (groups as any[]).reduce(
+  (s: number, g: any) => s + deliveryCost(kmByMerchant[g.merchantId] ?? 2),
+  0
+);
+
+const total: number = subtotal + delivery;
+ 0);
   const total = subtotal + delivery;
 
   const placeOrder = async()=>{
