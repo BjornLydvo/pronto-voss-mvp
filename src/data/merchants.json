@@ -1,0 +1,59 @@
+[
+  {
+    "id": "burger-king-voss",
+    "name": "Burger King Voss",
+    "distance_km": 2.4,
+    "open": true,
+    "paused": false,
+    "menu": [
+      {
+        "id": "bk-1",
+        "name": "Whopper",
+        "price": 129
+      },
+      {
+        "id": "bk-2",
+        "name": "Chicken Royale",
+        "price": 119
+      }
+    ]
+  },
+  {
+    "id": "malin-sushi",
+    "name": "Malin Sushi Voss",
+    "distance_km": 1.1,
+    "open": true,
+    "paused": false,
+    "menu": [
+      {
+        "id": "ms-1",
+        "name": "Laks nigiri (2 biter)",
+        "price": 49
+      },
+      {
+        "id": "ms-2",
+        "name": "Sushi 12 biter",
+        "price": 189
+      }
+    ]
+  },
+  {
+    "id": "pizza-voss",
+    "name": "Voss Pizza",
+    "distance_km": 4.8,
+    "open": true,
+    "paused": false,
+    "menu": [
+      {
+        "id": "pz-1",
+        "name": "Margherita",
+        "price": 159
+      },
+      {
+        "id": "pz-2",
+        "name": "Pepperoni",
+        "price": 179
+      }
+    ]
+  }
+]
